@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="{{ url_for('static', filename='js/htmx.min.js') }}"></script>
+
+    <title>Click to generate password</title>
+</head>
+<body>
+
+    <p>Click to trigger request for password suggestion</p>
+
+    <form action="/submit" hx-target="#value_key" hx-swap="outerHTML" autocomplete="off" method="post" >
+        {% block myinput %}
+        <input type="text" name="value_key" id="value_key" value="{{ value }}" hx-get="/genpasswd" hx-trigger="click delay:1s" hx-swap="outerHTML"/>
+        <input type="submit" value="Submit">
+        {% endblock %}
+
+    </form>
+
+    <div id="content">
+    {% block content %}
+    {% endblock %}
+    </div>
+
+</body>
+</html>
