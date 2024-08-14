@@ -6,15 +6,16 @@
 
     <script src="{{ url_for('static', filename='js/htmx.min.js') }}"></script>
 
-    <title>Click to generate password</title>
+    <title>Click to generate strong password</title>
 </head>
 <body>
 
-    <p>Click to trigger request for password suggestion</p>
+    <p>Ctrl + Click Input box to generate strong password suggestion</p>
 
     <form action="/submit" hx-target="#value_key" hx-swap="outerHTML" autocomplete="off" method="post" >
         {% block myinput %}
-        <input type="text" name="value_key" id="value_key" value="{{ value }}" hx-get="/genpasswd" hx-trigger="click delay:1s" hx-swap="outerHTML"/>
+        <input type="text" name="value_key" id="value_key" value="{{ value }}" hx-get="/genpasswd" hx-trigger="click[ctrlKey] delay:1s" hx-swap="outerHTML" hx-params="not value_key"/>
+
         <input type="submit" value="Submit">
         {% endblock %}
 
@@ -26,4 +27,7 @@
     </div>
 
 </body>
+
+
+
 </html>

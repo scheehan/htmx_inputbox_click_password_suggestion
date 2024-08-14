@@ -1,5 +1,5 @@
 {% block myinput %}
 
-<input id="value_key" name="value_key" type="text" hx-get="/genpasswd" hx-trigger="click delay:1s" hx-swap="outerHTML" value="{{ value }}" >
+<input id="value_key" name="value_key" type="text" hx-get="/genpasswd" hx-trigger="click[ctrlKey] delay:1s" hx-swap="outerHTML" value="{{ value }}" hx-params="not value_key" />
 
 {% endblock %}
