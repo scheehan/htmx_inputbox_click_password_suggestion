@@ -52,19 +52,21 @@ Objective were to allow users to trigger strong password request whenever needed
 
 [pySecureTokenGenerator][4] python function serve as backend strong password generator
 
+generate a random alphanumeric string with special symbol characters without whitespace. 
+at least one lowercase character, at least one uppercase character, at least one special symbol character and at least three digits
+
 ```python
 from PySecretsGen import passwd
 
 @app.route("/genpasswd")
 def genpasswd():
     
-    # generate a random alphanumeric string with special symbol characters without whitespace.  
     mypasswd = passwd(12)
     
     return render_template('input.html', value=mypasswd)
 ```
 
-HTMX action
+HTMX library access AJAX features directly from HTML
 
 ```python
 <form action="/submit" hx-target="#value_key" hx-swap="outerHTML" autocomplete="off" method="post" >
