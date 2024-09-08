@@ -114,8 +114,10 @@ pip install -r requirements.txt
 ```
 ## Clone repository
 ```python
-git clone https://github.com/scheehan/xxxx
-cd xxx
+git clone https://github.com/scheehan/htmx_inputbox_click_password_suggestion
+cd htmx_inputbox_click_password_suggestion
+
+flask run --debug
 ```
 
 [1]: https://htmx.org/
