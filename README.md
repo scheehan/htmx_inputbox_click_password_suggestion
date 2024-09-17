@@ -2,7 +2,7 @@
 
 ---
 
-![intro](/images/htmx_password_generator.png)
+[![intro](/images/htmx_password_generator.png)](https://youtu.be/rdVZaA2emQQ)
 
 ## Introduction
 
