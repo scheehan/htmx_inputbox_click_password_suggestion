@@ -8,7 +8,7 @@
 
 Users registration often require user to be creative in order to fullfill password requirement on-the-fly. 
 
-This simple web app were to demostrate prove-of-concept (PoC) with Flask as web framework, python function to generate cryptographically strong pseudo-random, and htmx access AJAX in HTML. 
+This simple web app were to demonstrate prove-of-concept (PoC) with Flask as web framework, python function to generate cryptographically strong pseudo-random, and htmx access AJAX in HTML. 
 
 Helps users having difficulty to come up with effective and strong password create strong, unique passwords while try to register their online accounts. Address challeges for users to come up with password during account creation.
 
@@ -21,7 +21,7 @@ Strong password suggestion is to generte passwords that are enhances the securit
 
 ## How it works
 
-The problem try to address were randomise cryptographic token whenever a request triggered. Typical users account creation often from web sites. Thus, Demonstration uses web framework Flask to rander web input box html elements for password input, after password string submitted, received password will be display within a div tag html element.
+The problem try to address were randomise cryptographic token whenever a request triggered. Typical users account creation often from web sites. Thus, Demonstration uses web framework Flask to render web input box html elements for password input, after password string submitted, received password will be display within a div tag html element.
 
 [Flask][2] is a Web application framework allow to develop web applications easily with python code. Coupled together with web template engine [jinja2][3] to render a dynamix web page. 
 
